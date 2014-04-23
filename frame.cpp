@@ -214,8 +214,8 @@ void MyFrame::UpdateShow(wxString sFileName)
     wxString html;
     m_sBmpFileName = sFileName;
     html = "<html><body>"
-            "<img src=" + m_sBmpFileName +
-            ">"
+            "<img src=\"" + m_sBmpFileName +
+            "\" />"
             "</body></html>";
 
     m_HWshow->SetPage( html );
@@ -1497,19 +1497,21 @@ void MyFrame::OnManualUI(wxUpdateUIEvent& evt)
 }
 void MyFrame::OnOpenFile(wxCommandEvent& evt)
 {
-    wxString caption = wxT("选择文件");
+    wxString caption = wxT("选择餐盘图像文件");
     wxString filter = wxT("JPEG file(*.jpg)|*.jpg|PNG file(*.png)|*.png|BMP file(*.bmp)|*.bmp");
-    wxString DefaultDir = wxT(".");
+    wxString DefaultDir = wxEmptyString;
     wxString DefaultName = wxEmptyString;
     wxFileDialog dialog(this,caption,DefaultDir,DefaultName,
                         filter,wxFD_OPEN);
     dialog.CenterOnScreen();
     if(dialog.ShowModal() == wxID_OK)
     {
+//        wxMessageBox("Before updateshow!");
         UpdateShow(dialog.GetPath());
+//        wxMessageBox("After updateshow!");
     }
     InitEditMenu();
-    m_LCresult->DeleteAllItems();
+//    m_LCresult->DeleteAllItems();
 }
 
 void MyFrame::InitEditMenu()

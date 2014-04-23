@@ -217,5 +217,5 @@ pip-log.txt
 #Code::Blocks
 obj/
 bin/
-./*.png
 *.exe
+tmp*.png
