@@ -164,8 +164,14 @@ void MyFrame::InitInterface()
     m_LCplate->AppendColumn(wxT("餐盘名"));
     m_LCplate->AppendColumn(wxT("餐盘路径"));
 
+    wxSize size = m_LCplate->GetMinSize();
+    size.SetWidth(170);
+    m_LCplate->SetSize(size);
+
     UpdatePlate();
     m_mgr.AddPane(m_LCplate, wxLEFT, wxT("餐盘库"));
+
+//    m_mgr.GetPane(m_LCplate).MinSize(size);
 
     m_LCfood = CreateListCtrl(ID_FOOD);
     m_LCfood->AppendColumn(wxT("菜肴名"));
@@ -752,7 +758,7 @@ void MyFrame::AntiZeroThreshold()
     h1.Printf("%d",img.rows*400/img.cols);
     wxString html = wxT("<h1 align=\"center\">反零阈值处理</h1>"
                         "<table border=\"1\" align=\"center\">"
-                        "<tr><th>处理前</th><th>处理后</th></tr>"
+                        "<tr><td><h2>处理前</h2></td><td><h2>处理后</h2></td></tr>"
                         "<tr><td><img src=\"tmp1.png\" width=\"400\" height="+h1+" /></td>"
                         "<td><img src=\"tmp2.png\" width=\"400\" height="+h1+" /></td>"
                         "</tr>"
@@ -789,7 +795,7 @@ void MyFrame::CloseOperation1()
     h1.Printf("%d",img.rows*400/img.cols);
     wxString html = wxT("<h1 align=\"center\">闭运算处理1</h1>"
                         "<table border=\"1\" align=\"center\">"
-                        "<tr><th>处理前</th><th>处理后</th></tr>"
+                        "<tr><td><h2>处理前</h2></td><td><h2>处理后</h2></td></tr>"
                         "<tr><td><img src=\"tmp2.png\" width=\"400\" height="+h1+" /></td>"
                         "<td><img src=\"tmp3.png\" width=\"400\" height="+h1+" /></td>"
                         "</tr>"
@@ -877,7 +883,7 @@ void MyFrame::RiceRecognition()
 
         wxString html = wxT("<h1 align=\"center\">白饭检测</h1>"
                         "<table border=\"1\" align=\"center\">"
-                        "<tr><th>处理前</th><th>处理后</th></tr>"
+                        "<tr><td><h2>处理前</h2></td><td><h2>处理后</h2></td></tr>"
                         "<tr><td rowspan=\"2\"><img src=\"tmp3.png\" width=\"400\" height="+h1+" /></td>"
                         "<td align=\"center\"><img src=\"tmp4_1.png\" width="+w2+" height="+h2+" /></td>"
                         "</tr>"
@@ -951,7 +957,7 @@ void MyFrame::PlateBlacked()
     h1.Printf("%d",img.rows*400/img.cols);
     wxString html = wxT("<h1 align=\"center\">餐盘二值化处理</h1>"
                         "<table border=\"1\" align=\"center\">"
-                        "<tr><th>处理前</th><th>处理后</th></tr>"
+                        "<tr><td><h2>处理前</h2></td><td><h2>处理后</h2></td></tr>"
                         "<tr><td><img src=\"tmp1.png\" width=\"400\" height="+h1+" /></td>"
                         "<td><img src=\"tmp5.png\" width=\"400\" height="+h1+" /></td>"
                         "</tr>"
@@ -998,7 +1004,7 @@ void MyFrame::FoodWhited()
     h1.Printf("%d",src.rows*400/src.cols);
     wxString html = wxT("<h1 align=\"center\">菜肴二值化处理</h1>"
                         "<table border=\"1\" align=\"center\">"
-                        "<tr><th>处理前</th><th>处理后</th></tr>"
+                        "<tr><td><h2>处理前</h2></td><td><h2>处理后</h2></td></tr>"
                         "<tr><td><img src=\"tmp5.png\" width=\"400\" height="+h1+" /></td>"
                         "<td><img src=\"tmp6.png\" width=\"400\" height="+h1+" /></td>"
                         "</tr>"
@@ -1036,7 +1042,7 @@ void MyFrame::CloseOperation2()
     h1.Printf("%d",img.rows*400/img.cols);
     wxString html = wxT("<h1 align=\"center\">闭运算处理2</h1>"
                         "<table border=\"1\" align=\"center\">"
-                        "<tr><th>处理前</th><th>处理后</th></tr>"
+                        "<tr><td><h2>处理前</h2></td><td><h2>处理后</h2></td></tr>"
                         "<tr><td><img src=\"tmp6.png\" width=\"400\" height="+h1+" /></td>"
                         "<td><img src=\"tmp7.png\" width=\"400\" height="+h1+" /></td>"
                         "</tr>"
@@ -1078,7 +1084,7 @@ void MyFrame::FoodErode()
     h1.Printf("%d",img.rows*400/img.cols);
     wxString html = wxT("<h1 align=\"center\">腐蚀处理</h1>"
                         "<table border=\"1\" align=\"center\">"
-                        "<tr><th>处理前</th><th>处理后</th></tr>"
+                        "<tr><td><h2>处理前</h2></td><td><h2>处理后</h2></td></tr>"
                         "<tr><td><img src=\"tmp7.png\" width=\"400\" height="+h1+" /></td>"
                         "<td><img src=\"tmp8.png\" width=\"400\" height="+h1+" /></td>"
                         "</tr>"
@@ -1175,7 +1181,7 @@ void MyFrame::FoodRecognition()
                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                       "菜肴检测</h1>"
                   "<table border=\"1\" align=\"center\">"
-                  "<tr><th>处理前</th><th>处理后</th></tr>"));
+                  "<tr><td><h2>处理前</h2></td><td><h2>处理后</h2></td></tr>"));
     wxString tmp;
     tmp.Printf("%d",img.rows*400/img.cols);
     switch(m_rc.size())
@@ -1367,25 +1373,24 @@ void MyFrame::Pay()
     sprice.Printf("%.1lf",result);
 
     tmp.Printf("%d",m_rc.size());
-    wxString html(wxT("<h1 align=\"center\">计价</h1>"
-                      "<table border=\"1\">"
-                      "<tr><th>餐盘图像</th>"
-                      "<th>菜肴图像</th>"
-                      "<th>菜肴名</th>"
-                      "<th>菜肴价格</th></tr>"
-                      "<tr><td rowspan=\"3"
-                      "\"><img src=\"tmp1.png\" width=\"400\" /></td>"
+    wxString html(wxT("<h1 align=\"center\">总价:"+sprice+"</h1>"));
+    html = html + wxT("<table border=\"1\">"
+                      "<tr><td align=\"center\"><h2>餐盘图像</h2></td>"
+                      "<td align=\"center\"><h2>菜肴图像</h2></td>"
+                      "<td align=\"center\"><h2>菜肴名</h2></td>"
+                      "<td align=\"center\"><h2>菜肴价格</h2></td></tr>"
+                      "<tr><td rowspan=\"3\""
+                      "><img src=\"tmp1.png\" width=\"400\" /></td>"
                       "<td><img src=\"tmp10.png\" /></td>"
-                      "<td align=\"center\">"+result_name[0]+"</td>"
-                      "<td align=\"center\">"+result_price[0]+"</td></tr>"
+                      "<td align=\"center\"><h2>")+result_name[0]+"</h2></td>"
+                      "<td align=\"center\"><h2>"+result_price[0]+"</h2></td></tr>"
                       "<tr><td align=\"center\"><img src=\"tmp11.png\" /></td>"
-                      "<td align=\"center\">"+result_name[1]+"</td>"
-                      "<td align=\"center\">"+result_price[1]+"</td></tr>"
+                      "<td align=\"center\"><h2>"+result_name[1]+"</h2></td>"
+                      "<td align=\"center\"><h2>"+result_price[1]+"</h2></td></tr>"
                       "<tr><td align=\"center\"><img src=\"tmp12.png\" /></td>"
-                      "<td align=\"center\">"+result_name[2]+"</td>"
-                      "<td align=\"center\">"+result_price[2]+"</td></tr>"
-                      "</table>"
-                      "<h1 align=\"left\">"+wxT("总价")+":"+sprice+"</h1>"));
+                      "<td align=\"center\"><h2>"+result_name[2]+"</h2></td>"
+                      "<td align=\"center\"><h2>"+result_price[2]+"</h2></td></tr>"
+                      "</table>";
     UpdateShow2(html,"tmp9.png");
     SetStatusText(wxT("计价结束"));
 }
@@ -1403,6 +1408,7 @@ void MyFrame::OnAuto(wxCommandEvent& evt)
 //    m_bplateDetection = false;
 //    m_bCount = true;
     m_mode = false;
+
 }
 
 void MyFrame::OnPlateRecognitionUI(wxUpdateUIEvent& evt)
@@ -1487,6 +1493,8 @@ void MyFrame::OnAutoUI(wxUpdateUIEvent& evt)
     {
         evt.Check(true);
     }
+    else
+        evt.Check(false);
 }
 void MyFrame::OnManualUI(wxUpdateUIEvent& evt)
 {
@@ -1494,6 +1502,8 @@ void MyFrame::OnManualUI(wxUpdateUIEvent& evt)
     {
         evt.Check(true);
     }
+    else
+        evt.Check(false);
 }
 void MyFrame::OnOpenFile(wxCommandEvent& evt)
 {

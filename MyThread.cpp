@@ -143,7 +143,7 @@ void* MyThread::Entry()
     wxString h2;h2.Printf("%d",rc.height*400/img_scene.cols);
 
     wxString html=wxT("<h1 align=\"center\">餐盘检测</h1><br />"
-                      "<table border=\"1\" align=\"center\"><tr><th>处理前</th><th>处理后</th></tr>"
+                      "<table border=\"1\" align=\"center\"><tr><td><h2>处理前</h2></td><td><h2>处理后</h2></td></tr>"
                       "<tr><td rowspan=\"2\"><img src=\""+m_name+"\" width="+w1+" height="+h1+" /></td>"
                       "<td align=\"center\"><img src=\"tmp1.png\" width="+w2+" height=" +h2+" /></td></tr>"
                       "<tr><td><img src=\"tmp1_1.png\" width="+w1+" height="+h1+" /></td></tr></table>");
