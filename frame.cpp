@@ -178,7 +178,7 @@ void MyFrame::InitInterface()
     m_LCfood->AppendColumn(wxT("菜肴路径"));
     m_LCfood->AppendColumn(wxT("菜肴价格"));
     m_LCfood->AppendColumn(wxT("分类器训练文件"));
-
+    m_LCfood->AppendColumn(wxT("菜肴文件名"));
     UpdateFood();
     m_mgr.AddPane(m_LCfood, wxRIGHT, wxT("菜肴库"));
 
@@ -317,7 +317,8 @@ void MyFrame::UpdateFood()
         m_LCfood->InsertItem(i,sqlite3_column_text(stmt,5));
         m_LCfood->SetItem(i,1,sqlite3_column_text(stmt,2));
         m_LCfood->SetItem(i,2,sqlite3_column_text(stmt,6));
-        m_LCfood->SetItem(i++,3,sqlite3_column_text(stmt,3));
+        m_LCfood->SetItem(i,3,sqlite3_column_text(stmt,3));
+        m_LCfood->SetItem(i++,4,sqlite3_column_text(stmt,1));
         rc = sqlite3_step(stmt);
     }
 
@@ -327,7 +328,10 @@ void MyFrame::UpdateFood()
 
 void MyFrame::OnViewPlate(wxCommandEvent& evt)
 {
-    m_sBmpFileName = m_LCplate->GetItemText(m_index_plate,1);
+    wxString file,path;
+    file = m_LCplate->GetItemText(m_index_plate,0);
+    path = m_LCplate->GetItemText(m_index_plate,1);
+    m_sBmpFileName = path+file;
     UpdateShow(m_sBmpFileName);
 //    m_LCresult->DeleteAllItems();
     InitEditMenu();
@@ -444,7 +448,10 @@ void MyFrame::OnDeletePlate(wxCommandEvent& evt)
 
 void MyFrame::OnViewFood(wxCommandEvent& evt)
 {
-    m_sBmpFileName = m_LCfood->GetItemText(m_index_food,1);
+    wxString file,path;
+    file = m_LCfood->GetItemText(m_index_food,4);
+    path = m_LCfood->GetItemText(m_index_food,1);
+    m_sBmpFileName = path + file;
     UpdateShow(m_sBmpFileName);
 //    m_LCresult->DeleteAllItems();
 }
@@ -1295,13 +1302,13 @@ void MyFrame::Pay()
     }
 //    m_LCresult->DeleteAllItems();
 
-    char* sql = "select train_path,food_name,price from food where train_path != '' order by train_path;";
+    char* sql = "select train_path,food_name,price,train_name from food where train_path != '' order by train_path;";
     sqlite3_prepare_v2(db,sql,-1,&stmt,NULL);
     rc = sqlite3_step(stmt);
 
     while(rc == SQLITE_ROW)
     {
-        xml.push_back(string((const char*)sqlite3_column_text(stmt,0)));
+        xml.push_back(string((const char*)sqlite3_column_text(stmt,0)) + string((const char*)sqlite3_column_text(stmt,3)));
         name.push_back(string((const char*)sqlite3_column_text(stmt,1)));
         price.push_back(sqlite3_column_double(stmt,2));
         rc = sqlite3_step(stmt);
