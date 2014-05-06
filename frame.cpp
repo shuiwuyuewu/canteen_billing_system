@@ -1302,7 +1302,7 @@ void MyFrame::Pay()
     }
 //    m_LCresult->DeleteAllItems();
 
-    char* sql = "select train_path,food_name,price,train_name from food where train_path != '' order by train_path;";
+    char* sql = "select train_path,food_name,price,train_name from food where train_path != '' order by train_name;";
     sqlite3_prepare_v2(db,sql,-1,&stmt,NULL);
     rc = sqlite3_step(stmt);
 

@@ -2883,3 +2883,50 @@
 
 1384175439 d:\lenovo\documents\github\canteen_billing_system\sample.xpm
 
+1399344413 source:d:\lenovo\documents\github\canteenbillingsystem\app.cpp
+	"app.h"
+	"frame.h"
+
+1399344413 d:\lenovo\documents\github\canteenbillingsystem\app.h
+	"wx/app.h"
+
+1399344413 d:\lenovo\documents\github\canteenbillingsystem\frame.h
+	<vector>
+	"wx/frame.h"
+	"wx/grid.h"
+	"wx/aui/aui.h"
+	"wx/html/htmlwin.h"
+	"wx/listctrl.h"
+	"opencv2/opencv.hpp"
+	"wx/webview.h"
+
+1399344413 source:d:\lenovo\documents\github\canteenbillingsystem\dialog.cpp
+	"dialog.h"
+	"wx/sizer.h"
+	"wx/control.h"
+	"wx/stattext.h"
+	"wx/textctrl.h"
+	"wx/button.h"
+	"wx/valgen.h"
+
+1399344413 d:\lenovo\documents\github\canteenbillingsystem\dialog.h
+	"wx/dialog.h"
+
+1399344413 source:d:\lenovo\documents\github\canteenbillingsystem\main.cpp
+	"app.h"
+
+1399344413 source:d:\lenovo\documents\github\canteenbillingsystem\mythread.cpp
+	"MyThread.h"
+	"app.h"
+	"opencv2/core/core.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/nonfree/features2d.hpp"
+	"opencv2/opencv.hpp"
+	<vector>
+	"wx/msgdlg.h"
+	"frame.h"
+
+1399344413 d:\lenovo\documents\github\canteenbillingsystem\mythread.h
+	"wx/thread.h"
+	"wx/string.h"
+
