@@ -1,152 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="frame.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="dialog.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="40980" topLine="127" />
-		</Cursor>
-		<Folding>
-			<Collapse line="31" />
-			<Collapse line="142" />
-			<Collapse line="147" />
-			<Collapse line="199" />
-			<Collapse line="204" />
-			<Collapse line="209" />
-			<Collapse line="218" />
-			<Collapse line="230" />
-			<Collapse line="244" />
-			<Collapse line="257" />
-			<Collapse line="270" />
-			<Collapse line="276" />
-			<Collapse line="287" />
-			<Collapse line="298" />
-			<Collapse line="304" />
-			<Collapse line="329" />
-			<Collapse line="340" />
-			<Collapse line="355" />
-			<Collapse line="366" />
-			<Collapse line="378" />
-			<Collapse line="392" />
-			<Collapse line="398" />
-			<Collapse line="409" />
-			<Collapse line="421" />
-			<Collapse line="428" />
-			<Collapse line="438" />
-			<Collapse line="449" />
-			<Collapse line="459" />
-			<Collapse line="468" />
-			<Collapse line="478" />
-			<Collapse line="490" />
-			<Collapse line="502" />
-			<Collapse line="519" />
-			<Collapse line="528" />
-			<Collapse line="548" />
-			<Collapse line="568" />
-			<Collapse line="580" />
-			<Collapse line="588" />
-			<Collapse line="596" />
-			<Collapse line="608" />
-			<Collapse line="613" />
-			<Collapse line="616" />
-			<Collapse line="628" />
-			<Collapse line="633" />
-			<Collapse line="639" />
-			<Collapse line="672" />
-			<Collapse line="680" />
-			<Collapse line="691" />
-			<Collapse line="703" />
-			<Collapse line="706" />
-			<Collapse line="712" />
-			<Collapse line="715" />
-			<Collapse line="721" />
-			<Collapse line="724" />
-			<Collapse line="739" />
-			<Collapse line="746" />
-			<Collapse line="749" />
-			<Collapse line="777" />
-			<Collapse line="784" />
-			<Collapse line="788" />
-			<Collapse line="818" />
-			<Collapse line="825" />
-			<Collapse line="831" />
-			<Collapse line="853" />
-			<Collapse line="861" />
-			<Collapse line="870" />
-			<Collapse line="873" />
-			<Collapse line="907" />
-			<Collapse line="919" />
-			<Collapse line="926" />
-			<Collapse line="931" />
-			<Collapse line="939" />
-			<Collapse line="942" />
-			<Collapse line="953" />
-			<Collapse line="977" />
-			<Collapse line="984" />
-			<Collapse line="988" />
-			<Collapse line="996" />
-			<Collapse line="1000" />
-			<Collapse line="1024" />
-			<Collapse line="1031" />
-			<Collapse line="1035" />
-			<Collapse line="1062" />
-			<Collapse line="1069" />
-			<Collapse line="1074" />
-			<Collapse line="1103" />
-			<Collapse line="1110" />
-			<Collapse line="1115" />
-			<Collapse line="1136" />
-			<Collapse line="1143" />
-			<Collapse line="1147" />
-			<Collapse line="1163" />
-			<Collapse line="1171" />
-			<Collapse line="1175" />
-			<Collapse line="1194" />
-			<Collapse line="1224" />
-			<Collapse line="1255" />
-			<Collapse line="1261" />
-			<Collapse line="1275" />
-			<Collapse line="1297" />
-			<Collapse line="1323" />
-			<Collapse line="1325" />
-			<Collapse line="1347" />
-			<Collapse line="1352" />
-			<Collapse line="1357" />
-			<Collapse line="1361" />
-			<Collapse line="1405" />
-			<Collapse line="1412" />
-			<Collapse line="1421" />
-			<Collapse line="1428" />
-			<Collapse line="1435" />
-			<Collapse line="1442" />
-			<Collapse line="1449" />
-			<Collapse line="1456" />
-			<Collapse line="1463" />
-			<Collapse line="1470" />
-			<Collapse line="1477" />
-			<Collapse line="1484" />
-			<Collapse line="1488" />
-			<Collapse line="1497" />
-			<Collapse line="1499" />
-			<Collapse line="1506" />
-			<Collapse line="1508" />
-			<Collapse line="1515" />
-			<Collapse line="1524" />
-			<Collapse line="1534" />
-		</Folding>
-	</File>
-	<File name="frame.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4305" topLine="124" />
+			<Cursor1 position="1071" topLine="40" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="42" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="MyThread.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="122" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="MyThread.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -161,9 +23,9 @@
 			<Collapse line="156" />
 		</Folding>
 	</File>
-	<File name="app.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MyThread.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="35" topLine="0" />
+			<Cursor1 position="122" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="app.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -176,9 +38,24 @@
 			<Cursor1 position="4737" topLine="94" />
 		</Cursor>
 	</File>
-	<File name="dialog.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="app.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1071" topLine="40" />
+			<Cursor1 position="35" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="frame.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="40980" topLine="127" />
+		</Cursor>
+		<Folding>
+			<Collapse line="31" />
+			<Collapse line="142" />
+			<Collapse line="147" />
+		</Folding>
+	</File>
+	<File name="frame.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4305" topLine="124" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
